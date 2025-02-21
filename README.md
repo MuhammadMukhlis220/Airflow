@@ -98,18 +98,42 @@ branch_task >> [good_grade_task, improve_task]
    ```
    </details>
 
-Dari kode di atas, kita akan melakukan simulasi pemilihan eksekusi cabang task menggunakan `score`. Library yang dibutuhkan adalah BranchPythonOperator. Pemilihan cabang task akan ditentukan dari berapa nilai variabel `score`. KIta menggunakan if-else statement dengan me-return **nama task** dari task yang akan kita pilih. If-else statement ini dibuat di dalam fungsi python bernama `branch_logic`. Kita set untuk nilai `score` yang lebih dari 75 akan me-return task `good_grade_task` dari fungsi yang akan dibuat bernama `good_grade` dan *else*-nya me-return task `improve_grade` dari fungsi yang akan dibuat bernama `improve_grade`
+Dari kode di atas, kita akan melakukan simulasi pemilihan eksekusi cabang task menggunakan `score`. Library yang dibutuhkan adalah BranchPythonOperator. Pemilihan cabang task akan ditentukan dari berapa nilai variabel `score`. KIta menggunakan if-else statement dengan me-return **nama task** dari task yang akan kita pilih. If-else statement ini dibuat di dalam fungsi python bernama `branch_logic`. Kita set untuk nilai `score` yang lebih dari 75 akan me-return task `good_grade_task` dari fungsi yang akan dibuat bernama `good_grade` dan *else*-nya me-return task `improve_task` dari fungsi yang akan dibuat bernama `improve_grade`. Set variabel `score` menjadi 100 untuk mengeksekusi **if** statement.
 
 ![Alt Text](/pic/code_1.png)
+
 **Figure 2**
 
 Kemudian kita membuat 2 fungsi python bernama `good_grade` dan `improve_grade` yang keduanya akan menjadi pilihan cabang eksekusi. Jadikan fungsi `branch_logic` sebagai task yang menggunakan **BranchPythonOperator** sebagai fungsi yang memilih percabangan task selanjutnya. **Buat task dengan nama yang sesuai dari hasil return if-else statement yang telah dibuat**.
 
 ![Alt Text](/pic/code_2.png)
+
 **Figure 3**
 
 DI urutan eksekusi task, buat task cabang menggunakan karakter kurung kurawal "[]" yang mengurung kedua nama task tersebut.
 
 ![Alt Text](/pic/code_3.png)
+
 **Figure 4**
 
+Simpan DAG tersebut dengan nama DAG **branch_operator**
+
+## Step 2 Run the DAG and Check the Result
+
+Eksekusi DAG yang dibuat dan hasilnya adalah task `good_grade` yang dipilih dan task `improve_task` dilewatkan.
+
+![Alt Text](/pic/result_2.png)
+
+**Figure 5**
+
+Jika kita melihat log-nya, ada informasi yang menyatakan **Branch callable return** yang menyatakan `good_grade` task dipilih dan informasi **Skipping tasks [('improve_task', -1)]** yang menyatakan task `improve_task` dilewatkan.
+
+![Alt Text](/pic/result_1.png)
+
+**Figure 6**
+
+<br>
+<br>
+<br>
+
+**Thats all, give it a try!**
