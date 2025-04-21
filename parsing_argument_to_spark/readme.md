@@ -5,5 +5,5 @@ There are only one prerequisite to run the program: setting Variables in airflow
 
 Here is how to setting Variables in airflow:
 
-![Alt Text](parsing_argument_to_spark/pic/airflow_1.png)
+![Alt Text](pic/airflow_1.png)
 Figure 1
