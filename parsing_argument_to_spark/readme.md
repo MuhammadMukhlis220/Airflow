@@ -7,3 +7,5 @@ Here is how to setting Variables in airflow:
 
 ![Alt Text](pic/airflow_1.png)
 Figure 1
+
+After we send the argument, receive the argument by look at this section: [Receive argument from Airflow in PySpark](https://github.com/MuhammadMukhlis220/Spark/tree/main/spark_parsing_from_airflow)
