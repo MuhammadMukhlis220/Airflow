@@ -2,9 +2,11 @@
 # Airflow Python Branch Operator
 
 **Python Branch Operator di Apache Airflow**
+<br>
 Apache Airflow adalah platform untuk mendefinisikan, menjadwalkan, dan memonitor workflow. Salah satu fitur yang sangat berguna dalam Airflow adalah BranchPythonOperator, yang memungkinkan kita membuat alur kerja bercabang (branching) di dalam DAG (Directed Acyclic Graph). Dalam tutorial ini, kita akan membahas apa itu BranchPythonOperator, bagaimana cara menggunakannya, dan bagaimana cara membuat alur kerja dengan percabangan berdasarkan kondisi tertentu.
 
 **Apa Itu BranchPythonOperator?**
+<br>
 BranchPythonOperator adalah jenis operator di Airflow yang memungkinkan kita untuk menentukan alur eksekusi yang berbeda berdasarkan hasil dari fungsi Python yang dijalankan. Operator ini sangat berguna ketika Anda ingin mengeksekusi beberapa task dalam sebuah DAG, namun hanya salah satu task yang perlu dijalankan berdasarkan kondisi tertentu.
 
 Ketika sebuah BranchPythonOperator dijalankan, ia akan mengembalikan nama task berikutnya yang harus dieksekusi, tergantung pada logika yang ditentukan di dalam fungsi Python. Jika lebih dari satu branch dipilih, hanya satu task yang akan dieksekusi, dan sisa task yang tidak dipilih akan dilewati (skipped).
